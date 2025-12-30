@@ -62,3 +62,31 @@ code {
   background-color: #2ea043;
   text-decoration: none !important;
 }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+  }
+
+  .studies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .projects-grid, .studies-grid {
+      grid-template-columns: 1fr; 
+    }
+    
+    .project-card {
+      flex-direction: column; 
+      align-items: flex-start !important;
+    }
+
+    .project-card img {
+      width: 100% !important; 
+      height: auto !important;
+    }
+  }
