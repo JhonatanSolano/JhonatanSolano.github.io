@@ -1,0 +1,21 @@
+title: Jhonatan Alejandro Solano Mendoza | Matemático
+email: jhsolanom@unal.edu.co
+description: >- 
+  Matemático con experiencia en Ciencia de Datos apasionado por extraer valor de los datos mediante Machine Learning y Visualización avanzada.
+baseurl: "" 
+url: "https://JhonatanSolano.github.io"
+linkedin_username: jhsolanom
+github_username:  JhonatanSolano
+
+theme: minima
+plugins:
+  - jekyll-feed
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  certificates:
+    output: true
+  events:
+    output: true
