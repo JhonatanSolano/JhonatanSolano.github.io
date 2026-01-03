@@ -4,4 +4,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  <style>
+    a {
+      transition: opacity 0.3s ease;
+    }
+
+    .post-content a, 
+    .wrapper a,
+    .project-link,
+    .u-email,
+    .social-media-list li a {
+      color: #58a6ff !important; 
+      text-decoration: underline !important; 
+    }
+
+    .social-media-list li a[href*="wa.me"] {
+      color: #25d366 !important;
+    }
+
+    .post-content a:hover, 
+    .wrapper a:hover,
+    .u-email:hover, 
+    .social-media-list li a:hover {
+      opacity: 0.7;
+    }
+
+    section img {
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease !important;
+      cursor: pointer;
+    }
+
+    section img:hover {
+      transform: scale(1.15) translateY(-5px);
+      filter: brightness(1.2); 
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4); 
+    }
+
+    div[style*="background: #161b22"] {
+      transition: box-shadow 0.4s ease, border-color 0.4s ease !important;
+      border: 1px solid #30363d !important; 
+    }
+
+    div[style*="background: #161b22"]:hover {
+      border-color: #25d366 !important;
+      box-shadow: 0 0 15px rgba(88, 166, 255, 0.6) !important;
+      background: #1c2128 !important;
+    }
+
+    @media (hover: none) {
+      div[style*="background: #161b22"]:active {
+        border-color: #25d366 !important;
+        box-shadow: 0 0 15px rgba(88, 166, 255, 0.8) !important;
+      }
+    }
+  </style>
 </head>

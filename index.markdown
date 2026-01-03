@@ -2,30 +2,6 @@
 layout: home
 ---
 
-<style>
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  @media (max-width: 768px) {
-    .projects-grid {
-      grid-template-columns: 1fr; 
-    }
-    
-    .project-item {
-      flex-direction: column; 
-      text-align: center;
-    }
-
-    .project-item img {
-      width: 100% !important; 
-      height: auto !important;
-    }
-  }
-</style>
-
 <div style="text-align: justify; line-height: 1.6; margin-bottom: 20px;">
   <h1 style="text-align: left;">🚀 Portafolio Profesional</h1>
   <p>
@@ -67,21 +43,19 @@ layout: home
 
 <section style="clear: both; overflow: auto; margin-bottom: 20px;">
   <h2>🔬 Proyectos</h2>
-  <div class="projects-grid"> {% for p in site.projects %}
-      <div class="project-item" style="display: flex; gap: 20px; align-items: center; background: #161b22; padding: 15px; border-radius: 12px; border: 1px solid #30363d;">
+  <div class="projects-grid"> 
+    {% for p in site.projects %}
+      <div class="project-item">
         {% if p.image %}
-          <a href="{{ p.url | relative_url }}" style="text-decoration: none; flex-shrink: 0;">
-            <img src="{{ p.image | relative_url }}" alt="{{ p.title }}" 
-                 style="width: 150px; height: 100px; object-fit: cover; border-radius: 8px; border: 1px solid #30363d; transition: transform 0.3s;"
-                 onmouseover="this.style.transform='scale(1.05)'" 
-                 onmouseout="this.style.transform='scale(1)'">
+          <a href="{{ p.url | relative_url }}" class="project-link">
+            <img src="{{ p.image | relative_url }}" alt="{{ p.title }}">
           </a>
         {% endif %}
-        <div>
-          <h3 style="margin: 0; font-size: 1.1em;">
-            <a href="{{ p.url | relative_url }}" style="color: #58a6ff; text-decoration: none;">{{ p.title }}</a>
+        <div class="project-info">
+          <h3>
+            <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
           </h3>
-          <p style="margin: 5px 0; color: #8b949e; font-size: 0.9em; line-height: 1.4;">{{ p.description }}</p>
+          <p>{{ p.description }}</p>
         </div>
       </div>
     {% endfor %}
@@ -238,3 +212,4 @@ layout: home
     </div>
   </div>
 </section>
+

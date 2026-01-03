@@ -6,6 +6,7 @@ baseurl: ""
 url: "https://JhonatanSolano.github.io"
 linkedin_username: jhsolanom
 github_username:  JhonatanSolano
+whatsapp_number: "573112454282"
 
 theme: minima
 plugins:
